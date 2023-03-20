@@ -62,12 +62,12 @@
       async function getFriendship() {}
 
       async function sendMsg() {
-        if (liff.getContext().type !== null) {
-          await liff.sendMessage([
+        if (liff.getContext().type !== "none") {
+          await liff.sendMessages([
             {
-              type: "sticker",
-              stickerId: 1,
-              packageId: 1,
+              "type": "sticker",
+              "stickerId": 1,
+              "packageId": 1,
             },
           ]);
           alert("Message sent");
